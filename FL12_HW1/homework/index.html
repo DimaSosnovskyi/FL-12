@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <div id="container">
+        <div id="content" role="main">
+          <!-- TODO: Content goes here -->
+          <header id="Home">
+            <figure>
+              <img src="logo.png" alt="logo"/>
+            </figure>
+            <h1>HTML Elements</h1>
+          </header>
+          <hr>
+          <nav>
+            <a href="#Home"><b>Home</b></a>
+            <a href="#Headings"><b>Headings</b></a>
+            <a href="#Textformats"><b>Text formats</b></a>
+            <a href="#Typesoflists"><b>Types of lists</b></a>
+            <a href="#Table"><b>Table</b></a>
+            <a href="#Blockquotes"><b>Blockquotes</b></a>
+            <a href="#Registration"><b>Registration</b></a>
+          </nav>
+          <hr>
+          <main>
+              <p>Lorem ipsum dolor sit amet, <a href="test_link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <em>This is emphasized</em>. Donec faucibus. Nunc iaculis suscipit dui. 4<sup>4</sup> = 256. Phosphoric acid is H<sub>3</sub>PO<sub>4</sub>. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <em>Time Magazine</em>(That’s a citation). <u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. <strong>I am strong</strong>.</p>
+              <p>Watch out for the abbreviations! HTML and CSS are our tools. JS is a dynamically typed language. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum. To copy a file type COPY <em>filename</em>. <s>The meeting began at 7pm</s> <mark>Let’s make that 6pm</mark>. This text has been struck.</p>
+            <hr>
+            <p id="Headings">h1 defines the most important heading. h6 defines the least important heading. Font-size for h1 is the same as font-size for h2, because we have to use only one h1 on the page, and it is commonly used inside header</p>
+            <h2><b>Heading 2</b></h2>
+            <h3><b>Heading 3</b></h3>
+            <h4><b>Heading 4</b></h4>
+            <h5><b>Heading 5</b></h5>
+            <h6><b>Heading 6</b></h6>
+            <hr>
+            <h2 id="Textformats"><b>Text formats</b></h2>
+            <h3><b>Article</b></h3>
+            <article>
+                <h2><b>Article title</b></h2>
+                <p><b>Article description</b></p>
+            </article>
+            <h3><b>Preformatted Text</b></h3>
+            <pre>
+  Text in a <strong>pre</strong> element
+  is displayed in a fixed-width
+  font, and it preserves
+  both      <strong>spaces</strong> and
+  <strong>line breaks</strong>
+            </pre>
+            <h3>This is code</h3>
+            <pre>
+              <code>
+  .flex {
+    display: flex;
+    justify-content: justify;
+    aliign-items: center;
+  }
+              </code>  
+            </pre>
+            <h2 id="Typesoflists"><b>Unordered Wish List</b></h2>
+            <ul>
+              <li>Iphone 11 pro max</li>
+              <li>Books:
+              <ul>
+                <li>Clean code principles javascript</li>
+                <li>You don't know JS</li>
+                <li> Angular Pro</li>
+              </ul>
+              </li>
+              <li>Headphones</li>
+            </ul>
+            <h2><b>Ordered Task List</b></h2>
+            <ol>
+              <li>Pay the bills</li>
+              <li>Refuel the car</li>
+              <li>Finish homework
+              <ol type="A">
+                <li>Create HTML page according to the requirements</li>
+                <li>Upload to the GitHub repository</li>
+              </ol>
+              </li> 
+              <li>Enjoy your day</li>
+            </ol>
+            <h3>Definition List</h3>
+            <dl>
+              <dt><b>HTML</b></dt>
+              <dd>HTML is the standard markup language to create Web pages.</dd>
+              <dt><b>CSS</b></dt>
+              <dd>CSS describes how HTML elements are to be displayed.</dd>
+              <dt><b>JavaScript</b></dt>
+              <dd>JavaScript is a scripting languages, primarily used on the Web.</dd>
+            </dl>
+            <label for ="id_select">Select for learning</label>
+            <select id="id_select" name="select">
+              <option value="JS">JS</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+            </select>
+            <hr>
+            <hr>
+            <h2 id="Table"><b>Table</b></h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Skill</th>
+                  <th>Training</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>JAVA</td>
+                  <td>JAVA development training</td>
+                  <td>Lviv</td>
+                </tr>
+                <tr>
+                  <td>JAVASCRIPT</td>
+                  <td>FRONT-END development</td>
+                  <td>Kharkiv</td>
+                </tr>
+                <tr>
+                  <td>IOS</td>
+                  <td>IOS winter 2019</td>
+                  <td>Kyiv</td>
+                </tr>
+                <tr>
+                  <td>DEVOPS</td>
+                  <td>DEVOPS spring 2020</td>
+                  <td>Dnipro</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="Blockquotes"><b>Blockquotes</b></h2>
+            <p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
+            <blockquote>
+              <p>"So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read."</p>
+              <cite><u>Robert C. Martin (Uncle Bob)</u></cite>
+            </blockquote>
+            <hr id="Registration">
+            <form>
+              <fieldset>
+                <label for="Username">Username:</label>
+                <input id="Username" type="text">
+              </fieldset>
+              <fieldset>
+                <label for="Email">Email:</label>
+                <input id ="Email" type="email">
+              </fieldset>
+              <fieldset>
+                <label for="Password">Password:</label>
+                <input id="Password" type="password">
+              </fieldset>
+              <textarea cols="23" rows="4"></textarea>
+              <br>
+              <button>Submit</button>
+            </form>
+          </main>
+          <footer>
+            <address>&copy; Copyright Epam Systems</address>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
