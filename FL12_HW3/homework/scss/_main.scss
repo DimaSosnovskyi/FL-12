@@ -1,0 +1,221 @@
+@mixin buttonMoodfy($marginLeft,$marginTop) {
+    background: map-get($colors,buttonBackgrond);
+    color: map-get($colors,secondTextColor);
+    padding: 10px 32px;
+    border:none;
+    margin-left: $marginLeft;
+    margin-top:$marginTop;
+}
+@mixin linksMoodfy($leftLink,$topLink) {
+    color: white;
+    font-family: 'Hind', sans-serif;
+    position: relative;
+    left:$leftLink;
+    top: $topLink;
+    font-size:11px;
+}
+body{
+    margin:0px;
+}
+html{
+    background: $mainBackground;
+    @extend body;
+}
+.header{
+    background: linear-gradient(to top, rgba(90,68,18,0.1) 50%,transparent), $headerBackground left 10% top 60%/cover no-repeat border-box,#ff1b68;
+    border-bottom-right-radius: 300px 100px;
+    height: 550px;
+    .landing-logo{
+        position: absolute;
+        left: 150px;
+        bottom: 555px;
+        color: map-get($colors,firstTextColor);
+        p{
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            bottom: 25px;
+            font-family: $font-family;
+            span{
+                position: relative;
+                top: 10px;
+                width: 30px;
+                right: 37px;
+                font-size: 5px;
+                font-family: $font-family;
+            }
+        }
+    }
+    
+}
+.header:before{
+    content:'';
+    position: absolute;
+    left: 150px;
+    top:160px;
+    width: 190px;
+    height: 33px;
+    background: map-get($colors,wordsBackground);
+    z-index: 0;
+}
+.header_heading{
+    color: map-get($colors,firstTextColor);
+    margin: 0px;
+    position: relative;
+    left:150px;
+    top: 100px;
+    width: 350px;
+    font-family: $font-family;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 50px;
+    z-index: 10;
+}
+.header_text {
+    position: relative;
+    top: 100px;
+    left: 150px;
+    width: 365px;
+    right: 37px;
+    font-size: 10px;
+    font-family: $font-family;
+    color: map-get($colors,firstTextColor);
+}
+.header_button{
+    @include buttonMoodfy(150px,120px);
+}
+.login{
+    @include linksMoodfy(100px,0px);
+}
+.section{
+    background: $mainBackground;
+    text-align: center;
+    .section_text{
+        color: map-get($colors,firstTextColor);
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 0px;
+        padding-top: 15px;
+        &::after{
+            margin-top: -2.4%;
+		    margin-left: 50.5%;
+		    content: '';
+		    display: block;
+		    background: map-get($colors,wordsBackground);
+		    width: 109px;
+		    height: 28px;
+        }
+    }
+}
+.section_card_wrap{
+    margin-bottom: 16px;;
+    .section_card{
+        padding: 10px 8px;
+        background: map-get($colors,boxSectionColor);
+        margin: auto;
+        height: 153px;
+        width: 525px;
+        border-radius: 2px;
+        margin-bottom: 12px;
+        .section_card_img{
+            float: left;
+            margin-bottom: 8px;
+        }
+        .section_card_right_container{
+            color: map-get($colors,secondTextColor);
+            .section_card_heading{
+                font-size: 15px;
+            }
+            .section_card_text{
+                text-align: left;
+                width: 499px;
+                position: relative;
+                left: 20px;
+                font-family: $font-family;
+                font-size: 10px;
+            }
+            .section_link{
+                @include linksMoodfy(0px,0px);
+            }
+        }
+    }
+}
+.section_banner{
+    background: map-get($colors,linearGradientColor);
+    border-radius: 4px;;
+    padding: 8px 16px;
+    width: 950px;
+    height: 175px;
+    margin: auto;
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+    line-height: 0px;
+    z-index: 101;
+    position: relative;
+    top: 40px;
+}
+.section_banner:before{
+    content:'';
+    position: absolute;
+    left: 270px;
+    bottom: 120px;
+    width: 48px;
+    height: 27px;
+    background: map-get($colors,wordsBackground);
+    z-index: -1;
+}
+.section_banner_heading{
+    font-family: $font-family;
+    color: map-get($colors,firstTextColor);
+    font-weight: bold;
+    margin-left: 175px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    z-index: 1;
+}
+.section_banner_text{
+    color: map-get($colors,secondTextColor);
+    font-family: $font-family;
+    font-size: 12px;
+    margin-left: 115px;
+    margin-bottom: 50px;
+}
+.section_banner_button{
+    @include buttonMoodfy(250px,0px);
+}
+.footer-wrap{
+    background: map-get($colors, footerbackground);
+    display:  flex;
+    color: map-get($colors,pColor);
+    align-items: center;
+    height: 200px;
+    z-index: 100;
+    .footer_logo{
+        display: flex;
+        padding-left: 120px;
+        img{
+            padding-right: 10px;
+            padding-top: 15px;
+            height: 100%;
+        }
+        p{
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            line-height: 1.5;
+            span{
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+.footer_text{
+    padding-left: 275px;
+    width: 20%;
+}
+.footer-cr{
+    padding-left: 180px;
+}
