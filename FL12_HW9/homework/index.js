@@ -95,6 +95,8 @@ function substitute(list) {
 }
 substitute([58, 14, 48, 2, 31, 29]);
 
+
+
 function reverse (string) {
     let reverseString = '';
     let arrayFromString = string.split('');
@@ -107,6 +109,13 @@ function reverse (string) {
     return reverseString;
 }
 reverse('hey world');
+
+const date = new Date(2019, 0, 2);
+function getPastDay(input,days) {
+    const num = input.getDate() - days;
+    console.log(num);
+}
+getPastDay(date,3);
 
 function formatDate (input) {
     const year = input.getFullYear();
