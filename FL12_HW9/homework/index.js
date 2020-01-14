@@ -12,29 +12,23 @@ function convers () {
 convers('1', 2, 3, '4');
 
 function executeforEach (list,callback) {
-    let array = [];
     for(var i = 0; i < list.length; i++) {
-        array[i] = list[i];
+        callback(list[i])
     }
-    callback(array);
 }
 executeforEach([1,2,3],function (el) {
-   console.log(el * 2);
+   console.log(el*2);
    });
 
 function mapArray (list,callback) {
     let array = [];
     for(var i = 0; i < list.length; i++) {
-        if(typeof list[i] === 'string') {
-            +list[i];
-            array[i] = list[i];
-        }
-        array[i] = list[i];
+        array[i] = callback(+list[i])
     }
-    callback(array);
+    return console.log(array);
 }
 mapArray([2,'5',8],function (el) {
-   console.log(el + 3);
+   return el + 3;
    });
 
 function makeListFromRange (arrayRange) {
@@ -67,7 +61,7 @@ function reverse (string) {
     let letter;
     
     for (var i = 0; i < arrayFromString.length; i++) {
-        letter = arrayFromString[arrayFromString.length - 1 - i]
+        letter = arrayFromString[arrayFromString.length - 1 -i]
         reverseString += letter;
     }
     return reverseString;
