@@ -29,7 +29,20 @@ function mapArray (list,callback) {
 }
 mapArray([2,'5',8],function (el) {
    return el + 3;
-   });
+});
+
+function filterArray (list,callback) {
+    let array = [];
+    for(var i = 0; i < list.length; i++) {
+        if (callback(list[i]) % 2 === 0) {
+            array.push(callback(list[i]));
+        }
+    }
+    return console.log(array);
+}
+filterArray([2, 5, 8], function (el) {
+    return el;
+});
 
 function makeListFromRange (arrayRange) {
     let rangeMin = 0;
@@ -54,6 +67,33 @@ function makeListFromRange (arrayRange) {
     return listFromRange;
 }
 makeListFromRange([2,7]);
+
+const actors = [
+  { name: 'tommy', age: 36 },
+  { name: 'lee', age: 28 }
+];
+
+function getArayOfKeys (obj) {
+    let array = [];
+    for(var i = 0; i < obj.length; i++) {
+        array[i] = obj[i].name;
+    }
+    return console.log(array);
+}
+getArayOfKeys(actors);
+
+function substitute(list) {
+    let array = [];
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] < 30) {
+            array[i] = '*';
+        } else {
+            array[i] = list[i];
+        }
+    }
+    return console.log(array);
+}
+substitute([58, 14, 48, 2, 31, 29]);
 
 function reverse (string) {
     let reverseString = '';
