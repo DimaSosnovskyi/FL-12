@@ -35,8 +35,8 @@ let Fighter = function (obj) {
         return health;
     }
     const attack = function (anotherFighter) {
-        const probability = 100 - (anotherFighter.strength + anotherFighter.agility);
-        const isAtackSuccess = Math.floor(Math.random() * 100 <= probability);
+        const probability = 100 - (anotherFighter.getStraigth() + anotherFighter.getAgility());
+        const isAtackSuccess = Math.floor(Math.random() * 100) < probability;
         if (isAtackSuccess) {
             anotherFighter.dealDamage(damage);
             console.log(name + ' makes ' + damage + ' to ' + anotherFighter.getName());

@@ -1,0 +1,22 @@
+.children{
+    list-style: none;
+}
+.children:hover,
+.children:active{
+    cursor: pointer;
+}
+.folder-title{
+    padding: 2px;
+    border: 1px solid #000;
+    background: rgb(235, 235, 137);
+}
+.file{
+    display: none;
+    background: #777;
+    padding: 2px;
+    max-width: 55px;
+    border: 2px solid black;
+}
+.folder-label{
+    display: none;
+}
