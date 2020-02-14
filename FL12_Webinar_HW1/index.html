@@ -14,7 +14,7 @@
       <div class='container'>
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
           <a class="navbar-brand" href="#">
-            <img  src='img/logo.png' alt='logo'>
+            <img src='img/logo.png' alt='logo'>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
           <img class="img-fluid main__img" src='img/yoga.jpg' alt='yoga'>
         </div>
         <div class='col-md-4'>
-          <h2 class='head-title'>Class description</h2>
+          <h2 class='head-title active'>Class description</h2>
           <p class='main__description'>This workout uses a series of exercise routines
             designed to increase your core strength &
             improve your posture, energy, & flexibility.
@@ -63,44 +63,47 @@
         </div>
       </div>
     </div>
-    <section class='container main__related-classes related-classes'>
-      <h2 class='head-title'>Related classes</h2>
-      <div class='container row'>
-        <div class='col-mg-3'>
-          <div class='card related-classes__card'>
-            <img src="img/cardio-kickbox.jpg" class="card-img-top related-classes__img" alt="cardio-kickbox">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-            </div>
+  <section class='related-classes'>
+    <div class='container'>
+      <h2 class='head-title'>Related Classes</h2>
+      <div class='row'>
+        <div class='col-md-3 rel related-classes__card'>
+          <img src="img/cardio-kickbox.jpg" class="card-img-top related-classes__img related-classes__img--kickboxing" alt="cardio-kickbox">
+          <div class="card-body related-classes__body related-classes__body--kickboxing">
+            <h5 class="card-title related-classes__title">Cardio kickboxing</h5>
           </div>
         </div>
-        <div class='col-mg-3'>
-          <div class='card related-classes__card'>
-            <img src="img/fitness.jpg" class="card-img-top  related-classes__img" alt="fitness">
-            <div class="card-body">
-              <h5 class="card-title">Fitness xpress</h5>
-            </div>
+        <div class='col-md-3'>
+          <img src="img/fitness.jpg" class="card-img-top  related-classes__img related-classes__img--fitness" alt="fitness">
+          <div class="card-body related-classes__body related-classes__body--fitness">
+            <h5 class="card-title related-classes__title">Fitness xpress</h5>
           </div>
         </div>
-        <div class='col-mg-3'>
-          <div class='card related-classes__card'>
-            <img src="img/zumba.jpg" class="card-img-top  related-classes__img" alt="zumba">
-            <div class="card-body">
-              <h5 class="card-title">Zumba</h5>
-            </div>
+        <div class='col-md-3'>
+          <img src="img/zumba.jpg" class="card-img-top  related-classes__img related-classes__img--zumba" alt="zumba">
+          <div class="card-body related-classes__body related-classes__body--zumba">
+            <h5 class="card-title related-classes__title">Zumba</h5>
           </div>
         </div>
-        <div class='col-mg-3'>
-          <div class='card related-classes__card'>
-            <img src="img/bootcamp.jpg" class="card-img-top  related-classes__img" alt="bootcamp">
-            <div class="card-body">
-              <h5 class="card-title">Bootcamp</h5>
-            </div>
+        <div class="col-md-3">
+          <img src="img/bootcamp.jpg" class="card-img-top  related-classes__img related-classes__img--bootcamp" alt="bootcamp">
+          <div class="card-body related-classes__body related-classes__body--boocamp">
+            <h5 class="card-title related-classes__title">Bootcamp</h5>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   </main>
+  <div class='container footer'>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">&copy Epam Front-end lab, 2018</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
   <script src='js/jquery-3.4.1.js'></script>
   <script src="js/popper.js"></script>
   <script src='js/bootstrap.min.js'></script>

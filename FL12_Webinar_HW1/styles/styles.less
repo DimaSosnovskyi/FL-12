@@ -1,4 +1,7 @@
 @import 'variables';
+.header{
+    margin-bottom: 40px;
+}
 .header__wrapper{
     background: #f8f9fa;
 }
@@ -9,9 +12,79 @@
 .header__link:active{
     background: #colors[headersAndRcs];
 }
-.related-classes__img{
-    max-width: 216px;
+.head-title{
+    color: #colors[headersAndRcs];
 }
-.related-classes__card{
-    margin-right: 32px;
+.head-title::after{
+    content: '';
+    height: 2px;
+    max-width: 1200px;
+    display: block;
+    background-color: #colors[headersAndRcs];
+    transform: scale(1);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.active::after{
+    transform: scale(0);
+}
+.active{
+    margin-top: 10px;
+}
+.related-classes{
+    margin-top: 50px;
+    &__img{
+        max-width: 260px;
+    }
+    &__img--kickboxing{
+        border-top: 2px solid #colors[rck];
+        border-left: 2px solid #colors[rck];
+        border-right: 2px solid #colors[rck];
+    }
+    &__img--fitness{
+        border-top: 2px solid #colors[headersAndRcs];
+        border-left: 2px solid #colors[headersAndRcs];
+        border-right: 2px solid #colors[headersAndRcs];
+    }
+    &__img--zumba{
+        border-top: 2px solid #colors[rct];
+        border-left: 2px solid #colors[rct];
+        border-right: 2px solid #colors[rct];
+    }
+    &__img--bootcamp{
+        border-top: 2px solid #colors[rcf];
+        border-left: 2px solid #colors[rcf];
+        border-right: 2px solid #colors[rcf];
+    }
+    &__title{
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    &__body--boocamp{
+        background: #colors[rcf];
+    }
+    &__body--kickboxing{
+        background: #colors[rck];
+    }
+    &__body--fitness{
+        background: #colors[headersAndRcs];
+    }
+    &__body--zumba{
+        background: #colors[rct];
+    }
+}
+.related-classes .card-body{
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.footer{
+    margin-top: 40px;
+    & .navbar-light {
+        background: #colors[footerColor];
+    }
+}
+.footer .navbar-light .navbar-nav .nav-link {
+    color: white;
 }
