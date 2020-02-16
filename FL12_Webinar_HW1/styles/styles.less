@@ -1,6 +1,6 @@
 @import 'variables';
 .header{
-    margin-bottom: 40px;
+    margin-bottom: @mr;
 }
 .header__wrapper{
     background: #f8f9fa;
@@ -36,7 +36,7 @@
     margin-top: 10px;
 }
 .related-classes{
-    margin-top: 50px;
+    margin-top: @mr;
     &__img{
         max-width: 260px;
     }
@@ -84,7 +84,7 @@
     padding-top: 10px;
 }
 .footer{
-    margin-top: 40px;
+    margin-top: @mr;
     & .navbar-light {
         background: #colors[footerColor];
     }
@@ -111,4 +111,11 @@
     .related-classes__body--fitness {
         margin-bottom: 20px;
     }
+}
+@media only screen and (max-width: 575px) {
+    .header__link:hover,
+    .header__link:active{
+    background: #colors[headersAndRcs];
+    max-width: 70px;
+}
 }
