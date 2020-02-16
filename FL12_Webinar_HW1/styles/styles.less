@@ -12,6 +12,10 @@
 .header__link:active{
     background: #colors[headersAndRcs];
 }
+.main__description {
+    line-height: 1,5;
+    margin-top: 0;
+}
 .head-title{
     color: #colors[headersAndRcs];
 }
@@ -87,4 +91,24 @@
 }
 .footer .navbar-light .navbar-nav .nav-link {
     color: white;
+}
+@media only screen and (max-width: 1199px) {
+    .main .main__container .row .col-lg-8 .img-fluid{
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .related-classes__title{
+        font-size: 10px;
+    }
+    .active{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .related-classes__body--kickboxing,
+    .related-classes__body--fitness {
+        margin-bottom: 20px;
+    }
 }
