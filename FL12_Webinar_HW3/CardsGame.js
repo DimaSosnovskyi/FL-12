@@ -103,3 +103,10 @@ deck1.shuffle();
 deck2.shuffle();
 playerOne = new Player ('Nick',deck1);
 playerTwo = new Player ('Sam',deck2);
+
+
+// quit() {
+//   if(Employee.base.contains(this)) {
+//     Employee.base.splice(Employee.base.indexof(this), 1);
+//   }      
+// }
