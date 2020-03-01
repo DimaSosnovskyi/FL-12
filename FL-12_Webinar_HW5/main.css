@@ -14,6 +14,9 @@ body {
 .input{
     border: none;
 }
+.label-id{
+    margin-top: 20px;
+}
 .label-name,
 .label-username,
 .label-email,
@@ -35,8 +38,8 @@ body {
 }
 .edit-btn{
     position: absolute;
-    left: 220px;
-    bottom: 200px;
+    left: 150px;
+    bottom: 10px;
     background: red;
 
     border-radius: 5px;
@@ -44,15 +47,18 @@ body {
 .btn{
     position: absolute;
     bottom: 10px;
-    left: 110px;
+    left: 90px;
 }
 .cat{
     position: absolute;
-    top: 10px;
-    left: 150px;
+    bottom: 178px;
+    left: 100px;
+
     max-width: 75px;
     max-height: 50px;
+    margin-bottom: 20px;
     border-radius: 10px;
+    border: 3px solid rgb(27, 149, 185);
 
 }
 
@@ -60,7 +66,6 @@ body {
 .loading .lds-ring{
     display: inline-block;
 }
-
 
 
 .lds-ring {

@@ -8,96 +8,16 @@ async function getUserList () {
     const users = data;
 
     for(let user of users) {
-        // const domEl = document.createElement('form');
-        // domEl.className = 'main';
-        // const domLabel = document.createElement('div');
-        // domLabel.className = 'main__label';
-        // if(user.id) {
-        //     const userId = document.createElement('input');
-        //     userId.value = user.id;
-        //     domLabel.innerText = 'Id: ';
-        //     domLabel.append(userId);
-        // }
-        // if(user.name) {
-        //     const name = document.createElement('input');
-        //     name.value = user.name;
-        //     domLabel.innerText = 'Name: ';
-        //     domLabel.append(name);
-            
-        // }
-        // domEl.append(domLabel);
-        // rootNode.append(domEl);
        const userDate = document.createElement('form');
        userDate.className = 'userDate';
-
-       const labelId = document.createElement('div');
-       const userId = document.createElement('input');
-       userId.className = 'input'
-       userId.value = user.id
-       userId.name = 'id';
-       userId.disabled = true;
-       labelId.innerText = 'Id: ';
-       labelId.append(userId);
-
-    
-       const labelName = document.createElement('div');
-       labelName.className = 'label-name'
-       const name = document.createElement('input');
-       name.className = 'input';
-       name.value = user.name;
-       name.name = 'name';
-       labelName.innerText = 'Name: ';
-       labelName.append(name);
-    
-       const labelUserName = document.createElement('div');
-       labelUserName.className = 'label-username'
-       labelUserName.innerText = 'UserName: '
-       const userName = document.createElement('input');
-       userName.className = 'input';
-       userName.name = 'username';
-       userName.value = user.username;
-       labelUserName.append(userName);
-
+       const labelId = getUserId(user);
+       const labelName = getUserName(user);
+       const labelUserName = getUserUserName(user);
        const labelUserEmail = addEmailField(user);
-
-
-       const labelUserAddress = document.createElement('div');
-       labelUserAddress.className = 'label-address';
-       labelUserAddress.innerText = 'Address: ';
-       const userAddres = document.createElement('input');
-       userAddres.className = 'input';
-       userAddres.name = 'userAddress';
-       userAddres.disabled = true;
-       userAddres.value = `${user.address.street}, ${user.address.suite}`;
-       labelUserAddress.append(userAddres);
-
-       const labelUserPhone = document.createElement('div');
-       labelUserPhone.className = 'label-phone';
-       labelUserPhone.innerText = 'Phone: ';
-       const userPhone = document.createElement('input');
-       userPhone.className = 'input';
-       userPhone.disabled = true;
-       userPhone.value= user.phone;
-       labelUserPhone.append(userPhone);
-
-       const labelUserWebSite = document.createElement('div');
-       labelUserWebSite.className = 'label-website';
-       labelUserWebSite.innerText = 'Website: ';
-       const userWebsite = document.createElement('input');
-       userWebsite.className = 'input';
-       userWebsite.disabled = true;
-       userWebsite.value = user.website;
-       labelUserWebSite.append(userWebsite);
-
-       const labelUserCompany = document.createElement('div');
-       labelUserCompany.className = 'label-company';
-       labelUserCompany.innerText = 'Company: ';
-       const userCompany = document.createElement('input');
-       userCompany.className = 'input';
-       userCompany.disabled = true;
-       userCompany.value = user.company.name;
-       labelUserCompany.append(userCompany);
-
+       const labelUserAddress = getUserAddress(user);
+       const labelUserPhone = getUserPhone(user);
+       const labelUserWebSite = getUserWebsite(user);
+       const labelUserCompany = getUserCompany(user);
        const btn = document.createElement('button');
        btn.innerText = 'Submit';
 
@@ -139,14 +59,11 @@ async function getUserList () {
        inputSpinner.className = 'lds-ring'
        inputSpinner.innerHTML = '<div></div><div></div><div></div'
 
-       userDate.append(labelId,labelName,labelUserName,labelUserEmail,
+       userDate.append(catImg,labelId,labelName,labelUserName,labelUserEmail,
         labelUserAddress,labelUserPhone,labelUserWebSite,labelUserCompany,
-        catImg,editBtn,btn,
+        editBtn,btn,
         inputSpinner);
        rootNode.append(userDate);
-
-
-
     }
 }
 getUserList();
@@ -175,4 +92,97 @@ function addEmailField(user) {
     labelUserEmail.append(userEmail);
 
     return labelUserEmail;
+}
+
+function getUserCompany (user) {
+    const labelUserCompany = document.createElement('div');
+    labelUserCompany.className = 'label-company';
+    labelUserCompany.innerText = 'Company: ';
+    const userCompany = document.createElement('input');
+    userCompany.className = 'input';
+    userCompany.disabled = true;
+    userCompany.value = user.company.name;
+    labelUserCompany.append(userCompany);
+
+    return labelUserCompany;
+}
+
+function getUserWebsite (user) {
+    const labelUserWebSite = document.createElement('div');
+    labelUserWebSite.className = 'label-website';
+    labelUserWebSite.innerText = 'Website: ';
+    const userWebsite = document.createElement('input');
+    userWebsite.className = 'input';
+    userWebsite.disabled = true;
+    userWebsite.value = user.website;
+    labelUserWebSite.append(userWebsite);
+
+    return labelUserWebSite;
+}
+
+function getUserPhone (user) {
+    const labelUserPhone = document.createElement('div');
+    labelUserPhone.className = 'label-phone';
+    labelUserPhone.innerText = 'Phone: ';
+    const userPhone = document.createElement('input');
+    userPhone.className = 'input';
+    userPhone.disabled = true;
+    userPhone.value= user.phone;
+    labelUserPhone.append(userPhone);
+
+    return labelUserPhone;
+}
+
+function getUserAddress (user) {
+    const labelUserAddress = document.createElement('div');
+    labelUserAddress.className = 'label-address';
+    labelUserAddress.innerText = 'Address: ';
+    const userAddres = document.createElement('input');
+    userAddres.className = 'input';
+    userAddres.name = 'userAddress';
+    userAddres.disabled = true;
+    userAddres.value = `${user.address.street}, ${user.address.suite}`;
+    labelUserAddress.append(userAddres);
+
+    return labelUserAddress;
+}
+
+function getUserUserName (user) {
+    const labelUserName = document.createElement('div');
+    labelUserName.className = 'label-username'
+    labelUserName.innerText = 'UserName: '
+    const userName = document.createElement('input');
+    userName.className = 'input';
+    userName.name = 'username';
+    userName.value = user.username;
+    labelUserName.append(userName);
+
+    return labelUserName;
+}
+
+function getUserName (user) {
+    const labelName = document.createElement('div');
+    labelName.className = 'label-name'
+    const name = document.createElement('input');
+    name.className = 'input';
+    name.value = user.name;
+    name.name = 'name';
+    labelName.innerText = 'Name: ';
+    labelName.append(name);
+
+    return labelName;
+}
+
+function getUserId (user) {
+    const labelId = document.createElement('div');
+    labelId.className = 'label-id';
+    const userId = document.createElement('input');
+    userId.className = 'input'
+    userId.value = user.id
+    userId.name = 'id';
+    userId.disabled = true;
+    labelId.innerText = 'Id: ';
+    labelId.append(userId);
+
+    return labelId;
 }
