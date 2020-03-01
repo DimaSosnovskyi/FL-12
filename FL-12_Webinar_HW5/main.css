@@ -1,0 +1,25 @@
+.main__id{
+    margin: 2px;
+}
+.userDate{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+.input{
+    border: none;
+}
+.label-name,
+.label-username,
+.label-email,
+.label-address,
+.label-phone,
+.label-website,
+.label-company{
+    display: flex;
+}
+.userDate{
+    margin: auto;
+    
+}
