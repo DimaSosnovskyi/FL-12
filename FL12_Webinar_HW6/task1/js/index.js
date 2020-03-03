@@ -99,4 +99,3 @@ $("img[alt!='Here is some dogg from google search']").css({'display':'inline-blo
 $('img').eq(2).css({'padding-top': '50px'});
 $('img').parent('.mbox').css({'float':'left','border':'1px solid red'});
 
-
