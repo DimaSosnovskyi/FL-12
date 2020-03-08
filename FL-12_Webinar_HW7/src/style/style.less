@@ -1,0 +1,20 @@
+@import 'variable';
+*{
+    color: @mainColor;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img{
+        max-width: 200px;
+        border-radius: 20px;
+    }
+    &__list{
+        border: 2px solid tomato;
+        background: lightcoral;
+    }
+    &__rule{
+        color:white;
+    }
+}
