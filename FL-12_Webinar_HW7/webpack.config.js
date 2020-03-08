@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     watch: true,
     entry: './src/app.js',
-    mode: 'development',
+    mode: 'production',
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, 'dist')
@@ -48,6 +48,16 @@ module.exports = {
             use: [
                 'file-loader'
             ]
+          },
+          {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
+            }
           }
         ],
     }
