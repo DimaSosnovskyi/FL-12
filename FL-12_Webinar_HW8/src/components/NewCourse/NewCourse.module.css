@@ -1,0 +1,60 @@
+.wrapper{
+    background: white;
+
+    padding-bottom: 420px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+
+    border-radius: 5px;
+    position:relative;
+}
+.wrapper h3{
+    text-align: center;
+}
+.titleinput{
+    display: flex;
+    flex-direction: column;
+}
+.titleinput input{
+    border: 2px solid rgb(219, 216, 216);
+    max-width: 300px;
+}
+.descriptioninput{
+    display: flex;
+    flex-direction: column; 
+}
+.descriptioninput input{
+    border: 2px solid rgb(219, 216, 216);
+    max-width: 300px;
+    height: 100px;
+}
+.durationinput{
+    display: flex;
+    flex-direction: column; 
+}
+.durationinput input{
+    border: 2px solid rgb(219, 216, 216);
+    max-width: 150px;
+}
+.date input{
+    width: 140px; 
+    border: 2px solid rgb(219, 216, 216);
+
+    position: absolute;
+    right: 50px;
+    bottom: 138px;
+}
+.authorsinput{
+    display: flex;
+    flex-direction: column; 
+}
+.authorsinput input{
+    border: 2px solid rgb(219, 216, 216);
+    max-width: 150px;
+}
+.newcoursesbutton{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,20 @@
+.header{
+    grid-area: h;
+    
+    display: flex;
+    align-items: center;
+
+    background: white;
+
+    height: 80px;
+    padding-left: 50px;
+  }
+img{
+    max-width: 70px;
+    max-height: 70px;
+    
+}
+.text {
+    background: white;
+    font-weight: bold;
+}

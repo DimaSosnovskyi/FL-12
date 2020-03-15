@@ -1,0 +1,21 @@
+body{
+  background: rgb(233, 223, 223);
+}
+.wrapper {
+  display: grid;
+
+  grid-template-areas: 
+  'h h'
+  'f b'
+  'c c'
+  ;
+
+  grid-template-columns: 10fr 2fr;
+  grid-template-rows: 100px 40px 1fr;
+}
+.mainWrapper{
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+

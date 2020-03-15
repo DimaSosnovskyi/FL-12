@@ -1,0 +1,35 @@
+.courses{
+    grid-area: c;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    background: white;
+    padding: 20px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+.courses a{
+  text-decoration: none;
+  letter-spacing: 10px;
+  color: black;
+}
+.courseName{
+  font-weight: bold;
+}
+.description{
+  width: 400px;
+}
+
+.actionitems{
+  display: none;
+}
+
+.actionitemsVisible{
+  display: block;
+}
+.item{
+  cursor: pointer;
+}

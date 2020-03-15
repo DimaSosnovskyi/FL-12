@@ -1,0 +1,23 @@
+.form{
+    grid-area: f;
+    
+    margin: 0 auto;
+    
+  }
+input{
+  background: white;
+  width: 720px;
+  height: 20px;
+  border-radius: 3px;
+  border: none;
+}
+.formbutton{
+ margin: 8px;
+ padding-top: 6px;
+ padding-bottom: 8px;
+ padding-right: 65px;
+ padding-left: 65px;
+ background: linear-gradient(rgb(0, 255, 242), #05979c);
+ color: white;
+ border-radius: 5px;
+}
