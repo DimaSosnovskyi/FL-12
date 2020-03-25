@@ -1,10 +1,5 @@
-const getMock  = (url,cb) => {
-  fetch(url)
-  .then((response) => {
-      return response.json();
-  })
-  .then((data) => {
-      cb(data)
-  })
+const getMock  = (url) => {
+  const promis = fetch(url);
+  return promis;
 }
 export { getMock }

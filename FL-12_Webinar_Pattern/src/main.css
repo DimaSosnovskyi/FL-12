@@ -1,3 +1,23 @@
-h1{
-    font-weight: bold;
+.list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+.list__main{
+    font-size: 25px;
+    border: 3px solid red;
+    border-radius: 4px;
+    max-width: 200px;
+    background: #777;
+    color: white;
+}
+.list__item{
+    border: 3px solid blue;
+    background: lightgray;
+    color: white;
+    max-width: 190px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
 }
