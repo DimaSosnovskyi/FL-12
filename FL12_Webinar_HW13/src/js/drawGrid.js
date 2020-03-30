@@ -7,5 +7,4 @@ const drawGrid = () => {
     ctx.fillRect(50,90,200,3);
     ctx.fillRect(50,150,200,3);
 }
-
 export { drawGrid }

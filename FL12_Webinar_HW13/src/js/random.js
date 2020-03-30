@@ -9,27 +9,16 @@ const drawAsterixe = (player) => {
     ctx.moveTo(285,95);
     ctx.lineTo(319,64);
     ctx.stroke();
-    ctx.font = "20px serif";
-    ctx.fillText(player,330,80)
 }
 const drawCircle = (x,y,player) => {
     ctx.beginPath();
     ctx.arc(x,y,15,0,Math.PI*2,false);
     ctx.stroke();
-    ctx.font = "20px serif";
-    ctx.fillText(player,330,25);
 }
-const random = arr => {
-    const value = arr[Math.floor(Math.random() * arr.length)];
-    switch(value) {
-      case 'circle':
-        drawCircle(300,20,'Player1*');
-        drawAsterixe('Player2')
-        break;
-      case 'asterixe':
-        drawAsterixe("Player1");
-        drawCircle(300,20,'Player2*');
-        break;
-    }
+const random = value => {
+  drawCircle(300,20);
+  drawAsterixe()
+  drawAsterixe();
+  drawCircle(300,20);
 }
 export { random }

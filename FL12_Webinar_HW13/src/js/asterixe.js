@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const drawAsterixe = (player) => {
+const drawAsterixe = () => {
     ctx.beginPath();
     ctx.moveTo(298,68);
     ctx.lineTo(319,86);
@@ -9,8 +9,6 @@ const drawAsterixe = (player) => {
     ctx.moveTo(298,95);
     ctx.lineTo(320,86);
     ctx.stroke();
-    ctx.font = "20px serif";
-    ctx.fillText(player,450,25)
 }
 const drawAsteriveForGrid = (x,y) => {
     ctx.beginPath();
@@ -23,5 +21,4 @@ const drawAsteriveForGrid = (x,y) => {
     ctx.lineTo(x+27,y);
     ctx.stroke();
 }
-
 export { drawAsteriveForGrid, drawAsterixe }

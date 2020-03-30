@@ -8,9 +8,40 @@ const button = document.querySelector('button');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const winner = document.getElementById('winner');
+const player1 = document.getElementById('player1');
+const player2 = document.getElementById('player2');
+const score1 = document.getElementById('score1');
+const score2 = document.getElementById('score2');
+const button1 = document.getElementById('button1');
+button1.addEventListener('click',() => {
+  alert(`Player1(${player1Score}points) againt Player2(${player2Score}points)`);
+  player1Score = 0;
+  player2Score = 0;
+  showScore();
+})
+let play = true;
+let player1Score = 0;
+let player2Score = 0;
+const showScore = () => {
+  score1.innerText = 'player ' + player1Score;
+  score2.innerText = player2Score + ' player2';
+}
+showScore();
+const showPlayers = () => {
+  if (play) {
+    player1.innerText = 'player 1*';
+  } else {
+    player1.innerText = 'player 2*';
+  }
+  if (play) {
+    player2.innerText = 'player 2';
+  } else {
+    player2.innerText = 'player 1';
+  }
+}
+showPlayers();
 drawGrid();
-let arr = ['asterixe','circle'];
-random(arr);
+random();
 let playerTurn = true;
 const changeTurn = () => {
   playerTurn = !playerTurn;
@@ -36,16 +67,12 @@ let rightBottomAngleAsterixe = false;
 let score = 0;
 $('#canvas').click((event) => {
   if (playerTurn) {
-    console.log(score);
-    console.log(event.pageX,event.pageY);
     if ((event.pageX > 60 && event.pageX < 125)
         && (event.pageY > 32 && event.pageY < 95) &&
         leftTopAngleCircle === false &&
         leftTopAngleAsterixe === false) {
         drawCircleForGrid(83,58);
         leftTopAngleCircle = true;
-        console.log(leftTopAngleCircle,leftTopAngleAsterixe)
-        console.log();
         changeTurn();
         score++;
     } else if ((event.pageX > 132 && event.pageX < 186)
@@ -198,7 +225,6 @@ const getCrossedOut = () => {
         drawRedLine(50,56,250,56,'red');
         showWinner();
         isDraw = false;
-        console.log(isDraw);
     } else if ((leftMiddleAngleAsterixe && middleAsterixe &&
         rightMiddleAngleAsterixe) || (leftMiddleAngleCircle &&
         middleCircle && rightMiddleAngleCircle)) {
@@ -243,8 +269,13 @@ const getCrossedOut = () => {
         isDraw = false;
     }
     showDraw();
-  }
+}
+
+let turn = true;
 button.addEventListener('click',() => {
+  turn = !turn;
+  play = !play;
+  showPlayers();
   playerTurn = true;
   isDraw = true;
   winner.innerText = '';
@@ -291,9 +322,22 @@ const drawWhiteCircle = (x,y) => {
   ctx.fill();
 }
 const showWinner = () => {
-    if (score % 2 !== 0) {
+    if ((score % 2 !== 0) && turn) {
+      player1Score++;
+      showScore();
       winner.innerText = 'The winner is player with 0-sign';
-    } else if (score % 2 === 0) {
+    } else if ((score % 2 !== 0) && turn === false) {
+      player2Score++;
+      showScore();
+      winner.innerText = 'The winner is player with 0-sign';
+
+    } else if ((score % 2 === 0) && turn) {
+      player2Score++;
+      showScore();
+      winner.innerText = 'The winner is player with x-sign';
+    } else if ((score % 2 === 0) && turn === false) {
+      player1Score++;
+      showScore();
       winner.innerText = 'The winner is player with x-sign';
     }
   }
@@ -301,5 +345,5 @@ const showWinner = () => {
     if (score === 9 && isDraw) {
       winner.innerText = 'Draw!';
     }
-  }
-export { showDraw,showWinner }
+}
+
