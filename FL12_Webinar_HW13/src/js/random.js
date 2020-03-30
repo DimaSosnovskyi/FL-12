@@ -2,15 +2,15 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const drawAsterixe = (player) => {
     ctx.beginPath();
-    ctx.moveTo(400,5);
-    ctx.lineTo(425,40);
+    ctx.moveTo(285,64);
+    ctx.lineTo(319,95);
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(400,40);
-    ctx.lineTo(425,5);
+    ctx.moveTo(285,95);
+    ctx.lineTo(319,64);
     ctx.stroke();
     ctx.font = "20px serif";
-    ctx.fillText(player,450,25)
+    ctx.fillText(player,330,80)
 }
 const drawCircle = (x,y,player) => {
     ctx.beginPath();
@@ -32,5 +32,4 @@ const random = arr => {
         break;
     }
 }
-
 export { random }

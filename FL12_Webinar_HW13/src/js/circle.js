@@ -7,11 +7,10 @@ const drawCircle = (x,y,player) => {
     ctx.font = "20px serif";
     ctx.fillText(player,330,25);
 }
-
 const drawCircleForGrid  = (x,y) => {
     ctx.beginPath();
+    ctx.strokeStyle = 'black';
     ctx.arc(x,y,15,Math.PI*2,false);
     ctx.stroke();
 }
-
 export { drawCircle,drawCircleForGrid}
